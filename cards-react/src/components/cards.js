@@ -1,29 +1,39 @@
 import React, {Component} from 'react';
 import "./cards.css"
+import "./card2.css"
+import "./Card3.css"
 
 // import { Container } from './styles';
 
 export default class Cards extends Component{
-  constructor(props){
-    super(props);
-    this.state={
-
+  constructor(props) {
+    super(props)
+    this.state = {
+        card: true,
+        btn: true,
+        text: false,
     }
-    this.mudaCor= this.mudaCor.bind(this);
-  }
-  mudaCor(){
-    const btn = document.getElementById("btn");
-    btn.addEventListener("click", this.mudaCor)
-    console.log("funciona");
-
+    this.mudaCor = this.mudaCor.bind(this)
+}
+  mudaCor(e){
+    this.setState({
+      card: !this.state.card,
+      btn: !this.state.card,
+      paragraph: !this.state.paragraph,
+    })
+    e.preventDefault(e)
   }
 
   render(){
+    let Card = this.state.card ? "Card" : "Card2" || "Card3"
+    let Btn = this.state.btn ? "button" : "button2" || "button3"
+    let paragraph = this.state.paragraph ? "paragraph" : "paragraph3" ||"paragraph2"
+   
     return (
-      <div className="Card" id="card">
-          <h1> Titulo</h1>
-          <p>Progressively extend an expanded array of internal or "organic" sources after cross-media internal or "organic" sources. Synergistically transition open-source networks with.</p>
-          <button id ="btn" onClick={this.mudaCor()}>Clique aqui</button>
+      <div className={Card}>
+          <h1> SpeedTest </h1>
+          <p className={paragraph}>Somos o mais tradicional provedor de internet fibra optica da região localizada em Conceição do mato Dentro...</p>
+          <button onClick={this.mudaCor.bind(this)} className={Btn} >Conhecer</button>
       </div>
     )
   }

@@ -1,28 +1,14 @@
-.Card{
+.Card3{
   width: 500px;
   height: 450px;
   margin: 0 auto;
-  background-color: #f3f3f3;
-  color: black;
+  background-color: red;
+  color: white;
   align-items: center;
   box-shadow: 0 1px 1px 0 black;
   border-radius: 5px;
 }
-h1{
-  font-size: 2em;
-  padding: 20px;
-}
-p{
-  max-width: 400px;
-  font-size: 1.625em;
-  text-align: center;
-  color: gray;
-  margin: 40px auto;
-  font-weight: 200px;
-  text-align: justify;
-
-}
-button{
+.button2{
   width: 150px;
   height: 40px;
   margin: 20px;
@@ -30,6 +16,9 @@ button{
   text-transform: uppercase;
   border-radius: 4px;
   border: none;
-  background: blue;
+  background: black;
   color: #fff;
+}
+.paragraph3{
+  color: tomato;
 }
